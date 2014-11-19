@@ -19,7 +19,10 @@ public class VerificationEmail extends Email{
     this.subject = email.subject;
     this.text = email.text;
     this.to = email.to;
-    this.headers.put("X-Envoy-Type", "2");
+    this.headers.put("X-Envoy-Type", 1);
+  }
 
+  public VerificationEmail() {
+    this.headers.put("X-Envoy-Type", 1);
   }
 }
